@@ -17,15 +17,13 @@ public class Driver {
         poly2.addTerm(1,0);
         poly2.addTerm(3,2);
         poly2.addTerm(4,3);
-        System.out.println("polynomial 2 = " + poly1);
+        System.out.println("polynomial 2 = " + poly2);
 
         Polynomial poly3 = poly1.add(poly2);
         System.out.println("polynomial add = " + poly3);
 
         Polynomial poly4 = poly1.mult(poly2);
-        System.out.println(poly4);
-
-        System.out.println("polynomial mult = " + poly3);
+        System.out.println("polynomial mult = " + poly4);
 
         System.out.println("Eval at 5 = " + poly4.eval(5));
     }
