@@ -9,16 +9,15 @@ import java.util.stream.Collectors;
  */
 public class Poly implements Polynomial {
 
-    private Term[] terms;   // array of terms, not sorted
-    private int next = 0;   // denotes next available slot & (term count)
+    private Term[] terms; // array of terms, not sorted
+    private int next = 0; // denotes next available slot & (term count)
 
     /**
-     * Creates a new polynomial which can hold up to `termCount` `Term`s.
+     * Creates a new polynomial which can hold up to `maxCount` Term`s.
      *
      * @param maxCount number of terms
      */
     public Poly(int maxCount) {
-
         // you code goes here
     }
 
@@ -95,6 +94,7 @@ public class Poly implements Polynomial {
         return null;
     }
 
+
     /**
      * Multiply the target polynomial object with the one given as a parameter.
      * As a result, the returned polynomial object will eventually represent
@@ -138,4 +138,3 @@ public class Poly implements Polynomial {
     }
 
 }
-

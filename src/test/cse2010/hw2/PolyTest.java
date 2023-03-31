@@ -1,13 +1,13 @@
 package cse2010.hw2;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.stream.Stream;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-
-import java.util.stream.Stream;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class PolyTest {
 
@@ -15,8 +15,7 @@ class PolyTest {
         return Stream.of(
                 Arguments.of(1, 0, "1x^0"),
                 Arguments.of(2, 1, "2x^1"),
-                Arguments.of(3, 2, "3x^2")
-        );
+                Arguments.of(3, 2, "3x^2"));
     }
 
     @ParameterizedTest
@@ -36,12 +35,12 @@ class PolyTest {
 
         Polynomial poly = new Poly(3);
         poly.addTerm(1, 0);
-        poly.addTerm(2, 1);
-        poly.addTerm(3, 2);
+         poly.addTerm(2, 1);
+         poly.addTerm(3, 2);
 
-        assertEquals("3x^2 + 2x^1 + 1x^0", poly.toString());
-        assertEquals(2, poly.degree());
-        assertEquals(3, poly.getTermCount());
+         assertEquals("3x^2 + 2x^1 + 1x^0", poly.toString());
+         assertEquals(2, poly.degree());
+         assertEquals(3, poly.getTermCount());
     }
 
     @Test
@@ -73,7 +72,7 @@ class PolyTest {
     @Test
     void should_create_polynomials_with_vararg_terms() {
 
-        Polynomial poly = new Poly(new Term(2,1), new Term(3,2), new Term(1,0));
+        Polynomial poly = new Poly(new Term(2, 1), new Term(3, 2), new Term(1, 0));
 
         assertEquals("3x^2 + 2x^1 + 1x^0", poly.toString());
         assertEquals(2, poly.degree());
@@ -104,7 +103,7 @@ class PolyTest {
         poly1.addTerm(3, 1);
         poly1.addTerm(4, 0);
 
-        Polynomial poly2 = new Poly(new Term(2,1), new Term(1,0), new Term(4,3));
+        Polynomial poly2 = new Poly(new Term(2, 1), new Term(1, 0), new Term(4, 3));
 
         Polynomial poly3 = poly1.add(poly2);
 

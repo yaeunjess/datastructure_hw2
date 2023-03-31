@@ -1,5 +1,7 @@
 package cse2010.hw2;
 
+import java.util.Objects;
+
 /**
  * A class that defines a term inside a polynomial.
  * DO NOT MODIFY!!
