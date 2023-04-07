@@ -7,8 +7,8 @@ import java.util.Objects;
  * DO NOT MODIFY!!
  */
 public class Term {
-    public int coef;
-    public int exp;
+    public int coef; //계수
+    public int exp; //지수
 
     /**
      * Constructs a term with the given coefficient and exponent.
